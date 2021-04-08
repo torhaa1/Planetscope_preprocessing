@@ -5,7 +5,7 @@ Code is based on notebooks from Planetlabs, available here: https://github.com/p
 
 ### Available notebooks
 
-[Planetscope_preprocessing](https://github.com/t-haakens/Planet_processing/blob/main/Planetscope_preprocessing.ipynb) will:
+[Planetscope_preprocessing](https://github.com/t-haakens/Planet_processing/blob/main/Planetscope_preprocessing.ipynb)
 - Read multiple scenes
 - Convert TOA Radiance to TOA Reflectance
 - Create mosaic and clip over area of interest (AOI). 
