@@ -8,11 +8,11 @@ Code is based on notebooks from Planetlabs, available here: https://github.com/p
 #### Preprocessing
 * [PS_preprocess_reflectance_images](https://github.com/t-haakens/Planet_processing/blob/main/PS_preprocess_reflectance_images.ipynb)
 
-Convert TOA Radiance to TOA Reflectance. Deliver images scaled/unscaled, with/without clipping to AOI.
+Convert Radiance to Reflectance. Deliver images scaled/unscaled, with/without clipping to AOI (area of interest).
 
 * [PS_preprocess_reflectance_mosaic](https://github.com/t-haakens/Planet_processing/blob/main/PS_preprocess_reflectance_mosaic.ipynb)
 
-Convert TOA Radiance to TOA Reflectance. Deliver images or the mosaic scaled/unscaled, with/without clipping to AOI.
+Convert Radiance to Reflectance. Deliver images or the mosaic scaled/unscaled, with/without clipping to AOI (area of interest).
 
 
 
