@@ -19,6 +19,11 @@ Convert Radiance to Reflectance. Deliver images or the mosaic scaled/unscaled, w
 
 #### Analysis
 
-* [PS_analysis_veg_indices]()
+* [PS_analysis_veg_indices](https://github.com/t-haakens/Planet_processing/blob/main/PS_analysis_veg_indices.ipynb)
 
-Coming soon
+Calculates vegetation indices from PS 4-band imagery:
+- NDVI, EVI, SAVI, MSAVI2, ARVI, IPVI, DVI, RVI
+
+* [PS_analysis_segment_threshold](https://github.com/t-haakens/Planet_processing/blob/main/PS_analysis_segment_threshold.ipynb)
+
+Takes suitable vegetation indices as input, segment image with simple thresholding, smoothen with majority filter and export the mask.
