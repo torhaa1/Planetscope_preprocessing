@@ -12,7 +12,7 @@ Convert Radiance to Reflectance. Deliver images scaled/unscaled, with/without cl
 
 * [PS_preprocess_reflectance_mosaic](https://github.com/t-haakens/Planet_processing/blob/main/PS_preprocess_reflectance_mosaic.ipynb)
 
-Convert Radiance to Reflectance. Deliver images or the mosaic scaled/unscaled, with/without clipping to AOI (area of interest).
+Convert Radiance to Reflectance. Deliver images or the mosaic scaled/unscaled, with/without clipping to AOI.
 
 
 
