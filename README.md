@@ -26,4 +26,4 @@ Takes reflectance images as input, calculates vegetation indices from PS 4-band 
 
 * [PS_analysis_segment_threshold](https://github.com/t-haakens/Planet_processing/blob/main/PS_analysis_segment_threshold.ipynb)
 
-Takes suitable vegetation indices as input, segment image with simple thresholding, smoothen with majority filter and export mask.
+Takes vegetation indices as input, apply thresholding to segment image, smoothen with majority filter and export mask.
