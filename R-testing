@@ -1,0 +1,20 @@
+# R-testing
+
+library(rgdal)
+library(ggplot2)
+
+setwd("R/R_files/R-geospatial-testing")
+
+list.files()
+
+shp = readOGR(dsn = ".", layer = "Small_AOI")
+
+plot(shp, col="green", bg="lightblue", lwd=2)
+
+df = fortify(shp)
+
+ggplot()+
+  geom_polygon(data=df, aes(x=long, y=lat))+
+  theme_bw()+
+#------------------
+
