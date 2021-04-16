@@ -4,6 +4,7 @@ library(ggplot2)
 list.files(RColorBrewer)
 library(rgdal)
 library(raster)
+library(RStoolbox)
 
 # Set working directory
 setwd("R/R_files/R-geospatial-testing")
@@ -14,7 +15,6 @@ shp = readOGR(dsn = ".", layer = "Small_AOI")
 plot(shp, col="green", bg="lightblue", lwd=2)
 
 df = fortify(shp)
-
 ggplot()+
   geom_polygon(data=df, aes(x=long, y=lat))+
   theme_bw()+
@@ -27,7 +27,6 @@ r = raster("L1C_20190721_B04.tif")     # Sentinel-2
 r = aggregate(r, fact=2)
 plot(r)
 
-# Not sure if works
 df = as.data.frame(r, xy=T)
 ggplot()+
   geom_tile(data=df, aes(x=x, y=y))+
@@ -43,7 +42,7 @@ ggplot()+
   )
 #------------------------
  
-# Reading Multibandraster and testing For loops
+# Reading Multibandraster and testing For-loops
 
 # Reading in Multiband raster
 mbr = brick("L1C_20190721_Bands_2348.tif")
@@ -85,7 +84,6 @@ for (image in c(vegind_list)){
   plot(image)
 }
 
-# For loop test2 with titles
 for (image in c(vegind_list)){
   print("Tada!")
   plot(image, col=colorRampPalette(c('red','yellow','green')) (5), main="ndvi, evi, msavi2")
@@ -98,7 +96,7 @@ for (image in c(vegind_list)){
   writeRaster(msavi2, "msavi2.tif", NAflag = -999, overwrite = T)
 }
 
-# Very basic classification
+# Basic segmentation/thresholding
 forest <- ndvi>=0.7
 forest
 plot(forest)
@@ -110,7 +108,6 @@ par(mfrow=c(1,1))
 LULC <- forest + non_forest
 LULC
 plot(LULC, col=c("red", "green"), legend=TRUE)
-
 #-------------------
 
 # Reading files
@@ -122,7 +119,7 @@ list.files()
 Planet.series <- list.files(getwd(), pattern="\\AnalyticMS", full.names=FALSE)
 head(Planet.series)
 
-
+# Plot time-series
 for (image in Planet.series){
   mbr <- brick(image)
   plotRGB(mbr, r=3, g=2, b=1, stretch = 'lin')
@@ -132,20 +129,17 @@ mbr.21 = brick("20190721_AnalyticMS.tif")
 mbr.26 = brick("20190726_AnalyticMS.tif")
 
 Change = mbr.26 - mbr.21
-
 plot(Change)
 
 # Principal Component Analysis
 pca = rasterPCA(mbr.21, nComp = 3)
 
-
 # Never got this far...
-help(rasterPCA)
-
 tasseledCap()
 
 # Classification with SupportVectorMachine
 classification_svm = superClass()
 
-# Check out this Github for R on Remote sensing with Sentinel-2 data: https://github.com/WhyR2020/workshops/blob/master/satellite/whyr_satellite.R
-# Also check out EBImage package for image analysis
+If time check out:
+# R on Remote sensing with Sentinel-2 data: https://github.com/WhyR2020/workshops/blob/master/satellite/whyr_satellite.R
+# EBImage package for image analysis
