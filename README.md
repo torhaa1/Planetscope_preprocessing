@@ -14,8 +14,7 @@ Convert Radiance to Reflectance. Deliver images scaled/unscaled, with/without cl
 
 Convert Radiance to Reflectance. Deliver images or the mosaic scaled/unscaled, with/without clipping to AOI.
 
-
-
+<br>
 
 ### Analysis
 
@@ -26,4 +25,10 @@ Takes reflectance images as input, calculate, visualize and export vegetation in
 
 * [PS_analysis_segment_threshold](https://github.com/t-haakens/Planet_processing/blob/main/PS_analysis_segment_threshold.ipynb)
 
-Takes vegetation indices as input, apply thresholding to segment image, smoothen with majority filter and export mask.
+Takes vegetation indices as input, apply thresholding to segment image, smoothen with majority filter and export mask.  
+
+<br>
+
+Flowchart illustrating the process going from radiance images to a reflectance mosaic clipped to an AOI.  
+
+<img src="https://github.com/t-haakens/Planet_processing/blob/main/PS_preprocess_flowchart.png" width="700">
