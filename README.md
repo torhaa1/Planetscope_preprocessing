@@ -35,3 +35,6 @@ Takes vegetation indices as input, apply thresholding to segment image, smoothen
 Flowchart illustrating the process going from radiance images to a reflectance mosaic clipped to an AOI.  
 
 <img src="https://github.com/t-haakens/Planet_processing/blob/main/PS_preprocess_flowchart.png" width="700">
+
+> **Note**: If GitHub isn't rendering the images, consider downloading them for local viewing:
+> [Download Flowchart](https://github.com/t-haakens/Planetscope_preprocessing/raw/main/PS_preprocess_flowchart.png)
